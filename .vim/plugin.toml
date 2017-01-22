@@ -1,0 +1,39 @@
+# Dein
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+
+# The Silver Searcher
+[[plugins]]
+repo = 'rking/ag.vim'
+
+
+# Colors
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+
+# Ctrlp
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = """
+  if executable('ag')
+    let g:ctrlp_use_caching  = 0
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --hidden -g --nogroup -g ""'
+  endif
+"""
+
+
+# Vimagit
+[[plugins]]
+repo = 'jreybert/vimagit'
+hook_add = """
+  let g:magit_show_help              = 0
+  let g:magit_default_show_all_files = 2
+  let g:magit_default_fold_level     = 2
+  let g:magit_default_sections       = ['global_help', 'info', 'unstaged', 'staged', 'commit']
+"""
