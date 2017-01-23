@@ -13,6 +13,10 @@ set autoindent
 set smartindent
 set shiftwidth=2
 
+" show whitespace
+set list
+set listchars=tab:»-,trail:-,nbsp:%,eol:↲
+
 " search
 set incsearch
 set ignorecase
@@ -48,7 +52,6 @@ endif
 if !isdirectory(expand("~/.vim/repos/github.com/Shougo/dein.vim"))
   echo "install dein..."
   :call system("curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/installer.sh")
-  :call system("mkdir ~/.vim")
   :call system(" sh ~/installer.sh ~/.vim && rm ~/installer.sh")
 endif
 
