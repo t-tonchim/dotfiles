@@ -18,6 +18,7 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
+set wildignore+=*/tmp/*,*/cache/*,*.so,*.swp,*.rej,*/.svn/*,*.jpg,*.png
 
 " cursor
 set whichwrap=b,s,h,l,<,>,[,],~
