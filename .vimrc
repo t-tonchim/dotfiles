@@ -92,3 +92,5 @@ endif
 
 "End dein Scripts-------------------------
 
+" color
+colorscheme molokai
