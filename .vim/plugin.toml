@@ -8,6 +8,13 @@ repo = 'Shougo/dein.vim'
 repo = 'rking/ag.vim'
 
 
+# Thema
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = """
+  let g:ariline_powerline_fonts = 1
+"""
+
 # Colors
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
@@ -15,6 +22,16 @@ repo = 'w0ng/vim-hybrid'
 
 [[plugins]]
 repo = 'tomasr/molokai'
+
+
+# indent
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+
+# whitespace
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
 
 
 # Ctrlp
