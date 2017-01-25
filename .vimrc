@@ -93,4 +93,18 @@ endif
 "End dein Scripts-------------------------
 
 " color
-colorscheme molokai
+colorscheme onedark
+
+""" plugins
+
+" vim-lithtline
+set laststatus=2
+set showtabline=2
+set t_Co=256
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"x":""}',
+      \ },
+      \ 'separator': { 'left': '|', 'right': '|' }
+      \ }
