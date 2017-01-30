@@ -108,3 +108,6 @@ let g:lightline = {
       \ },
       \ 'separator': { 'left': '|', 'right': '|' }
       \ }
+
+set tags+=.svn/tags
+set tags+=.git/tags

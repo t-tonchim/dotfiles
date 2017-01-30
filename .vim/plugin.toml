@@ -54,3 +54,13 @@ hook_add = """
   let g:magit_default_fold_level     = 2
   let g:magit_default_sections       = ['global_help', 'info', 'unstaged', 'staged', 'commit']
 """
+
+
+# tags
+[[plugins]]
+repo = 'soramugi/auto-ctags.vim'
+hook_add = """
+  let g:auto_ctags = 1
+  let g:auto_ctags_directory_list = ['.git','.svn']
+"""
+
