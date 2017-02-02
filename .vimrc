@@ -111,3 +111,6 @@ let g:lightline = {
 
 set tags+=.svn/tags
 set tags+=.git/tags
+
+" keybind
+inoremap <silent>jj <ESC>
