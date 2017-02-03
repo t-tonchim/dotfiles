@@ -8,4 +8,4 @@ jquery.js
 node_modules
 .svn
 cache/*
-
+tags
