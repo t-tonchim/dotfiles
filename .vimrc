@@ -44,6 +44,12 @@ set history=100
 syntax on
 set synmaxcol =200
 
+" reset augroup
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -91,9 +97,6 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
-" color
-colorscheme onedark
 
 """ plugins
 

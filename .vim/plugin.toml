@@ -23,8 +23,8 @@ repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-hock_add = """
-  let g:onedark_termcolors=16
+hook_add = """
+  au MyAutoCmd VimEnter * nested colorscheme onedark
 """
 
 
