@@ -27,6 +27,17 @@ hook_add = """
   au MyAutoCmd VimEnter * nested colorscheme onedark
 """
 
+# syntax
+[[plugins]] #js syntax
+repo = 'othree/yajs.vim'
+hook_add = """
+  autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+"""
+on_ft = 'javascript'
+
+[[plugins]] #toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
 
 # indent
 [[plugins]]
