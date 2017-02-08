@@ -7,13 +7,6 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'rking/ag.vim'
 
-# Theme
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = """
-  source ~/.vim/lightline.conf.vim
-"""
-
 
 # Colors
 [[plugins]]
@@ -45,6 +38,17 @@ on_ft = 'toml'
 [[plugins]] #slim syntax
 repo = 'slim-template/vim-slim'
 on_ft = 'slim'
+
+[[plugins]] #syntax check
+repo = 'scrooloose/syntastic'
+
+# Theme
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = """
+  source ~/.vim/lightline.conf.vim
+"""
+
 # indent
 [[plugins]]
 repo = 'Yggdroot/indentLine'
