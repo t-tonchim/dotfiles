@@ -10,6 +10,9 @@ repo = 'rking/ag.vim'
 # Theme
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+hook_add = """
+  source ~/.vim/lightline.conf.vim
+"""
 
 
 # Colors

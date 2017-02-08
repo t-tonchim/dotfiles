@@ -104,13 +104,6 @@ endif
 set laststatus=2
 set showtabline=2
 set t_Co=256
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"x":""}',
-      \ },
-      \ 'separator': { 'left': '|', 'right': '|' }
-      \ }
 
 set tags+=.svn/tags
 set tags+=.git/tags
