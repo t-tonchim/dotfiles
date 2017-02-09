@@ -56,7 +56,6 @@ hook_add = """
   let g:indentLine_color_term = 256
 """
 
-
 # Ctrlp
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
@@ -95,3 +94,9 @@ hook_add = """
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
 """
 
+# Git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
