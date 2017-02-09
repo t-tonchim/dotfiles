@@ -27,7 +27,6 @@ set wildignore+=*/tmp/*,*/cache/*,*.so,*.swp,*.rej,*/.svn/*,*.jpg,*.png
 " cursor
 set whichwrap=b,s,h,l,<,>,[,],~
 set number
-set cursorline "hilight cursorline
 nnoremap j gj
 nnoremap k gk
 set backspace=indent,eol,start "enable backspace
