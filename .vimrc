@@ -30,6 +30,7 @@ set number
 nnoremap j gj
 nnoremap k gk
 set backspace=indent,eol,start "enable backspace
+set scrolloff=8
 
 " jump
 set showmatch "show match ( { [ etc..
