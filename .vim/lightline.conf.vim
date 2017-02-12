@@ -8,7 +8,7 @@
       \ 'active': {
       \   'left': [ [ 'mode', 'paste'],
       \             [ 'fugitive', 'gitgutter', 'filename' ] ],
-      \   'right': [ [ 'syntastic','ale', 'lineinfo' ],
+      \   'right': [ [ 'syntastic','lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
@@ -22,7 +22,7 @@
       \ },
       \ 'component_function': {
       \   'gitgutter' : 'MyGitGutter',
-      \   'fugitive'  : 'MyFugitive'
+      \   'fugitive'  : 'MyFugitive',
       \ }
       \ }
 let g:syntastic_mode_map = { 'mode': 'passive' }
