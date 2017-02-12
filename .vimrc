@@ -4,6 +4,7 @@ set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp
 set encoding     =utf-8
 scriptencoding utf-8
 set ambiwidth=double
+set noswapfile
 
 " indent
 set expandtab " tab replace whitespace
