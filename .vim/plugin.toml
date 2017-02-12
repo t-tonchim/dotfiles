@@ -45,7 +45,8 @@ repo = 'scrooloose/syntastic'
 [[plugins]] #syntax check eslint
 repo = 'w0rp/ale'
 hook_add = """
-  let g:ale_statusline_format = ['✖︎%d', '⚠︎%d', '']
+  nmap <silent> <C-w>j <Plug>(ale_next_wrap)
+  nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
 """
 on_ft = 'javascript'
 
