@@ -108,5 +108,11 @@ set t_Co=256
 set tags+=.svn/tags
 set tags+=.git/tags
 
+" set Filetype
+au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
+
 " keybind
 inoremap <silent>jj <ESC>
+autocmd FileType javascript.jsx,eruby,tpl,html,css,scss imap <buffer><expr><tab>
+    \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
+    \ "\<tab>"

@@ -108,3 +108,21 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+# emmet
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = """
+  let g:user_emmet_jsx = 1
+  let g:use_emmet_complete_tag = 1
+  let g:user_emmet_settings = {
+    \   'javascript' : {
+    \     'extends' : 'jsx',
+    \   },
+    \   'variables': {
+    \     'lang': "ja"
+    \   },
+    \   'indentation':'  '
+    \ }
+"""
+on_ft = ['tpl','javascript.jsx','html', 'eruby', 'css', 'scss']
