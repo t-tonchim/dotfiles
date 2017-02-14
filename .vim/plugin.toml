@@ -123,3 +123,8 @@ hook_add = """
     \ }
 """
 on_ft = ['tpl','javascript.jsx','html', 'eruby', 'css', 'scss']
+
+# Rails
+[[plugins]]
+repo = 'tpope/vim-rails'
+
