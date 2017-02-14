@@ -39,9 +39,6 @@ on_ft = 'toml'
 repo = 'slim-template/vim-slim'
 on_ft = 'slim'
 
-#[[plugins]] #syntax check
-#repo = 'scrooloose/syntastic'
-
 [[plugins]] #syntax check eslint
 repo = 'w0rp/ale'
 hook_add = """
