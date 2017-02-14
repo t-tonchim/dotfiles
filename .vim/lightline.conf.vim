@@ -8,33 +8,15 @@
       \ 'active': {
       \   'left': [ [ 'mode', 'paste'],
       \             [ 'fugitive', 'gitgutter', 'filename' ] ],
-      \   'right': [ [ 'syntastic','lineinfo' ],
+      \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
-      \ },
-      \ 'component_expand': {
-      \   'syntastic': 'SyntasticStatuslineFlag',
-      \   'ale': 'ALEGetStatusLine'
-      \ },
-      \ 'component_type': {
-      \   'syntastic': 'error',
-      \   'ale': 'error'
       \ },
       \ 'component_function': {
       \   'gitgutter' : 'MyGitGutter',
       \   'fugitive'  : 'MyFugitive',
       \ }
       \ }
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_ruby_checkers = ['rubocop']
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.php,*.rb,*.c,*.cpp call s:syntastic()
-augroup END
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-endfunction
 
 function! MyFugitive()
   try
