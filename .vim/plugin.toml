@@ -130,3 +130,7 @@ repo = 'tpope/vim-rails'
 
 [[plugins]]
 repo = 'tpope/vim-bundler'
+
+# Reason
+[[plugins]]
+repo = 'reasonml/vim-reason-loader'
