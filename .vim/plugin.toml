@@ -128,3 +128,5 @@ on_ft = ['tpl','javascript.jsx','html', 'eruby', 'css', 'scss']
 [[plugins]]
 repo = 'tpope/vim-rails'
 
+[[plugins]]
+repo = 'tpope/vim-bundler'
