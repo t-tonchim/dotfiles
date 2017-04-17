@@ -113,6 +113,7 @@ set tags+=.git/tags
 au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 
 " keybind
+let mapleader = "\<Space>"
 inoremap <silent>jj <ESC>
 autocmd FileType javascript.jsx,eruby,tpl,html,css,scss imap <buffer><expr><tab>
     \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
