@@ -18,6 +18,12 @@ set shiftwidth=2
 set list
 set listchars=tab:»-,trail:-,nbsp:%,eol:↲
 
+augroup HighligntTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
+
 " search
 set incsearch
 set ignorecase
