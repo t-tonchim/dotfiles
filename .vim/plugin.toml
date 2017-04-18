@@ -23,6 +23,14 @@ hook_add = """
   au MyAutoCmd VimEnter * nested colorscheme onedark
 """
 
+# {}()
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+# neocomplete
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
 # syntax
 [[plugins]] #js syntax
 repo = 'othree/yajs.vim'

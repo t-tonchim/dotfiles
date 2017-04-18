@@ -101,6 +101,9 @@ endif
 
 """ plugins
 
+" neocomplete
+source ~/.neocompleteconf.vim
+
 " vim-lithtline
 set laststatus=2
 set showtabline=2
