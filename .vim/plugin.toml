@@ -31,6 +31,9 @@ repo = 'cohama/lexima.vim'
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
 
+[[plugins]]
+repo = 'Shougo/neocomplcache.vim'
+
 # syntax
 [[plugins]] #js syntax
 repo = 'othree/yajs.vim'
