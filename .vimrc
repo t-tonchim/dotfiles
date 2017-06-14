@@ -127,7 +127,7 @@ let g:neosnippet#snippets_directory='~/.vim/snippets/'
 " keybind
 let mapleader = "\<Space>"
 inoremap <silent>jj <ESC>
-autocmd FileType javascript.jsx,eruby,tpl,html,css,scss imap <buffer><expr><tab>
+autocmd MyAutoCmd FileType javascript.jsx,eruby,tpl,html,css,scss imap <buffer><expr><tab>
     \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
     \ "\<tab>"
 
@@ -151,3 +151,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+" nmmap pain
+nmap <C-j> <C-w>-
+nmap <C-k> <C-w>+

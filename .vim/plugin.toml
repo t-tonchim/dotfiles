@@ -30,9 +30,24 @@ repo = 'cohama/lexima.vim'
 # neocomplete
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
+if = 'has("lua")'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if = 'has("nvim")'
+hook_add = """
+  let g:deoplete#enable_at_startup = 1
+"""
+on_i = 1
 
 [[plugins]]
 repo = 'Shougo/neocomplcache.vim'
+
+# shell
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+if = 'has("nvim")'
 
 # syntax
 [[plugins]] #js syntax
