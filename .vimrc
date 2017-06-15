@@ -68,6 +68,8 @@ if !isdirectory(expand("~/.vim/repos/github.com/Shougo/dein.vim"))
   :call system(" sh ~/installer.sh ~/.vim && rm ~/installer.sh")
 endif
 
+let g:python3_host_prog = expand('/usr/local/bin/python3')
+
 " Required:
 set runtimepath+=~/.vim/repos/github.com/Shougo/dein.vim
 
@@ -78,6 +80,7 @@ if dein#load_state('~/.vim/')
   " Let dein manage dein
   " Required:
   call dein#add('~/.vim/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/vimproc.vim')
 
   call dein#load_toml('~/.vim/plugin.toml')
 
@@ -152,6 +155,10 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-" nmmap pain
-nmap <C-j> <C-w>-
-nmap <C-k> <C-w>+
+" pain controll
+noremap <C-j> <C-w>-
+noremap <C-k> <C-w>+
+noremap <C-l> <C-w>>
+noremap <C-h> <C-w><
+
+noremap <C-s> :sp<CR><C-w>w:Deol<CR><CR>

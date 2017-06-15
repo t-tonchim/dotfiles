@@ -27,7 +27,7 @@ hook_add = """
 [[plugins]]
 repo = 'cohama/lexima.vim'
 
-# neocomplete
+# complete
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
 if = 'has("lua")'
@@ -38,15 +38,28 @@ repo = 'Shougo/deoplete.nvim'
 if = 'has("nvim")'
 hook_add = """
   let g:deoplete#enable_at_startup = 1
+  let g:deoplete#omni_patterns = {}
+  let g:deoplete#omni_patterns.ruby =
+  \ ['[^. *\t]\.\w*', '\h\w*::']
 """
 on_i = 1
 
 [[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+
+[[plugins]]
 repo = 'Shougo/neocomplcache.vim'
+if = 'has("lua")'
+on_i = 1
 
 # shell
 [[plugins]]
 repo = 'Shougo/deol.nvim'
+if = 'has("nvim")'
+
+# Denite
+[[plugins]]
+repo = 'Shougo/denite.nvim'
 if = 'has("nvim")'
 
 # syntax
@@ -98,7 +111,6 @@ hook_add = """
   endif
 """
 
-
 # Vimagit
 [[plugins]]
 repo = 'jreybert/vimagit'
@@ -108,7 +120,6 @@ hook_add = """
   let g:magit_default_fold_level     = 2
   let g:magit_default_sections       = ['global_help', 'info', 'unstaged', 'staged', 'commit']
 """
-
 
 # tags
 [[plugins]]
