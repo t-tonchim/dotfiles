@@ -129,6 +129,10 @@ hook_add = """
   let g:auto_ctags_directory_list = ['.git','.svn']
 """
 
+[[plugins]]
+repo = 'grassdog/tagman.vim'
+on_ft = ['javascript', 'javascript.jsx']
+
 # Filer
 [[plugins]]
 repo = 'scrooloose/nerdtree'
