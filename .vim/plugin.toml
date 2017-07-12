@@ -3,6 +3,14 @@
 repo = 'Shougo/dein.vim'
 
 
+# Help
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+hook_add = """
+  set helplang=ja,en
+"""
+
+
 # The Silver Searcher
 [[plugins]]
 repo = 'rking/ag.vim'
