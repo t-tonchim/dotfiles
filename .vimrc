@@ -80,7 +80,7 @@ if dein#load_state('~/.vim/')
   " Let dein manage dein
   " Required:
   call dein#add('~/.vim/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/vimproc.vim')
+  call dein#add('Shougo/vimproc.vim', {'build':'make'})
 
   call dein#load_toml('~/.vim/plugin.toml')
 
@@ -95,6 +95,10 @@ if dein#load_state('~/.vim/')
   " Required:
   call dein#end()
   call dein#save_state()
+endif
+
+if has('mac')
+   let g:vimproc_dll_path = $VIMRUNTIME . '/autoload/vimproc_mac.so'
 endif
 
 " Required:
@@ -160,5 +164,6 @@ noremap <C-j> <C-w>-
 noremap <C-k> <C-w>+
 noremap <C-l> <C-w>>
 noremap <C-h> <C-w><
+nnoremap <silent><buffer>q <C-w>w:quit<CR>
 
 noremap <C-s> :sp<CR><C-w>w:Deol<CR><CR>
