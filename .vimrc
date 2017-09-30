@@ -167,3 +167,4 @@ noremap <C-h> <C-w><
 nnoremap <silent><buffer>q <C-w>w:quit<CR>
 
 noremap <C-s> :sp<CR><C-w>w:Deol<CR><CR>
+

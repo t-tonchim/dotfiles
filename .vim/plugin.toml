@@ -104,6 +104,10 @@ repo = 'w0rp/ale'
 hook_add = """
   nmap <silent> <C-w>j <Plug>(ale_next_wrap)
   nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
+  let g:ale_fixers = {}
+  let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+  let g:ale_fixers['javascript.jsx'] = ['prettier', 'eslint']
+  let g:ale_fix_on_save = 1
 """
 on_ft = ['javascript','php','ruby']
 
@@ -159,6 +163,7 @@ on_ft = ['javascript', 'javascript.jsx']
 repo = 'scrooloose/nerdtree'
 hook_add = """
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
+  let NERDTreeShowHidden = 1
 """
 
 # Git
@@ -175,6 +180,9 @@ hook_add = """
   let g:user_emmet_jsx = 1
   let g:use_emmet_complete_tag = 1
   let g:user_emmet_settings = {
+    \   'javascript.jsx' : {
+    \     'extends' : 'jsx'
+    \   },
     \   'javascript' : {
     \     'extends' : 'jsx',
     \   },
@@ -201,3 +209,7 @@ repo = 'reasonml/vim-reason-loader'
 [[plugins]]
 repo = 'Galooshi/vim-import-js'
 on_ft = ['javascript', 'javascript.jsx']
+
+# Elixir
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
