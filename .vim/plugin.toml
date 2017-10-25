@@ -213,3 +213,18 @@ on_ft = ['javascript', 'javascript.jsx']
 # Elixir
 [[plugins]]
 repo = 'elixir-lang/vim-elixir'
+
+# Rspec
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+
+[[plugins]]
+repo = 'thoughtbot/vim-rspec'
+hook_add = """
+  nmap <Leader>t :call RunCurrentSpecFile()<CR>
+  nmap <Leader>s :call RunNearestSpec()<CR>
+  nmap <Leader>l :call RunLastSpec()<CR>
+  nmap <Leader>a :call RunAllSpecs()<CR>
+  let g:rspec_command = "Dispatch bin/spring rspec {spec}"
+"""
+on_ft = ['ruby']

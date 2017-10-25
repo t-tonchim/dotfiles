@@ -56,6 +56,10 @@ augroup MyAutoCmd
   autocmd!
 augroup END
 
+" autoread
+set autoread
+
+let mapleader = "\<Space>"
 
 "dein Scripts-----------------------------
 if &compatible
@@ -81,6 +85,8 @@ if dein#load_state('~/.vim/')
   " Required:
   call dein#add('~/.vim/repos/github.com/Shougo/dein.vim')
   call dein#add('Shougo/vimproc.vim', {'build':'make'})
+  call dein#add('~/.vim/repos/github.com/tpope/vim-dispatch')
+  call dein#add('tpope/vim-dispatch', {'build':'make'})
 
   call dein#load_toml('~/.vim/plugin.toml')
 
@@ -132,7 +138,6 @@ au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 let g:neosnippet#snippets_directory='~/.vim/snippets/'
 
 " keybind
-let mapleader = "\<Space>"
 inoremap <silent>jj <ESC>
 autocmd MyAutoCmd FileType javascript.jsx,eruby,tpl,html,css,scss imap <buffer><expr><tab>
     \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
