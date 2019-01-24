@@ -40,9 +40,6 @@ hook_add = """
 # Colors
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-hook_add = """
-  au MyAutoCmd VimEnter * nested colorscheme onedark
-"""
 
 # {}()
 [[plugins]]
@@ -109,7 +106,7 @@ hook_add = """
   let g:ale_fixers['javascript.jsx'] = ['prettier', 'eslint']
   let g:ale_fix_on_save = 1
 """
-on_ft = ['javascript','php','ruby']
+on_ft = ['javascript','php','ruby', 'elixir']
 
 # Theme
 [[plugins]]
@@ -192,7 +189,7 @@ hook_add = """
     \   'indentation':'  '
     \ }
 """
-on_ft = ['tpl','javascript.jsx','html', 'eruby', 'css', 'scss']
+on_ft = ['tpl','javascript.jsx','html', 'eruby', 'css', 'scss', 'eelixir']
 
 # Rails
 [[plugins]]
@@ -228,3 +225,25 @@ hook_add = """
   let g:rspec_command = "Dispatch bin/spring rspec {spec}"
 """
 on_ft = ['ruby']
+
+[[plugins]]
+repo = 'zah/nim.vim'
+hook_add = """
+  fun! JumpToDef()
+    if exists("*GotoDefinition_" . &filetype)
+      call GotoDefinition_{&filetype}()
+    else
+      exe "norm! \<C-]>"
+    endif
+  endf
+
+  " Jump to tag
+  nn <M-g> :call JumpToDef()<cr>
+  ino <M-g> <esc>:call JumpToDef()<cr>i
+"""
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'

@@ -72,7 +72,7 @@ if !isdirectory(expand("~/.vim/repos/github.com/Shougo/dein.vim"))
   :call system(" sh ~/installer.sh ~/.vim && rm ~/installer.sh")
 endif
 
-let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:python3_host_prog = expand('/Users/tanakatomoyuki/anaconda3/bin/python3')
 
 " Required:
 set runtimepath+=~/.vim/repos/github.com/Shougo/dein.vim
@@ -139,7 +139,7 @@ let g:neosnippet#snippets_directory='~/.vim/snippets/'
 
 " keybind
 inoremap <silent>jj <ESC>
-autocmd MyAutoCmd FileType javascript.jsx,eruby,tpl,html,css,scss imap <buffer><expr><tab>
+autocmd MyAutoCmd FileType javascript.jsx,eruby,tpl,html,css,scss,eelixir imap <buffer><expr><tab>
     \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
     \ "\<tab>"
 
@@ -164,6 +164,9 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
+au MyAutoCmd VimEnter * nested colorscheme onedark
+
+set clipboard+=unnamed
 " pain controll
 noremap <C-j> <C-w>-
 noremap <C-k> <C-w>+
