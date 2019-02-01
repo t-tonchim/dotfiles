@@ -45,35 +45,19 @@ repo = 'joshdick/onedark.vim'
 [[plugins]]
 repo = 'cohama/lexima.vim'
 
-# complete
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-if = 'has("lua")'
-on_i = 1
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("nvim")'
-hook_add = """
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#omni_patterns = {}
-  let g:deoplete#omni_patterns.ruby =
-  \ ['[^. *\t]\.\w*', '\h\w*::']
-"""
-on_i = 1
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#if = 'has("nvim")'
+#hook_add = """
+#  let g:deoplete#enable_at_startup = 1
+#  let g:deoplete#omni_patterns = {}
+#  let g:deoplete#omni_patterns.ruby =
+#  \ ['[^. *\t]\.\w*', '\h\w*::']
+#"""
+#on_i = 1
 
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
-
-[[plugins]]
-repo = 'Shougo/neocomplcache.vim'
-if = 'has("lua")'
-on_i = 1
-
-# shell
-[[plugins]]
-repo = 'Shougo/deol.nvim'
-if = 'has("nvim")'
 
 # Denite
 [[plugins]]
@@ -95,6 +79,40 @@ on_ft = 'toml'
 [[plugins]] #slim syntax
 repo = 'slim-template/vim-slim'
 on_ft = 'slim'
+
+# langage-server
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = """
+  if executable('pyls')
+    au User lsp_setup call lsp#register_server({ 'name': 'pyls', 'cmd': {server_info->['pyls']}, 'whitelist': ['python'], })
+  endif
+  if executable('typescript-langage-server')
+    au User lsp_setup call lsp$register_server({
+      \ 'name': 'javascript support using typescript-langage-server',
+      \ 'cmd' : { server_info->[&shell, &shellcmdflag, 'typescript-language-server --studio']},
+      \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+      \ 'whitelist': ['javascript', 'javascript.jsx'],
+      \ })
+  endif
+  if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+        \ 'whitelist': ['typescript', 'typescript.tsx'],
+        \ })
+  endif
+"""
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 [[plugins]] #syntax check eslint
 repo = 'w0rp/ale'
